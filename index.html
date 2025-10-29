@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supportformulär</title>
+    <!-- Länkar en extern styling-fil -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Bygger fram formuläret med ett section-element -->
+    <section>
+        <h1>Supportformulär</h1>
+        <p id="support-text">Här kan du skicka ett ärende till vår supportavdelning.</p>
+
+        <form action="https://swplayground.ltu.se/resources/parse_form.php" method="POST">
+            <!-- Använder div för att kunna styla enklare -->
+            <div class="namn-telefon-kontainer">
+                <label for="namn">Ditt namn:</label>
+                <input type="text" id="namn" name="namn">
+                <label for="telefon">Telefon:</label>
+                <input type="number" id="telefon" name="telefon">
+            </div>
+        
+        
+        <div class="prioritet-kontainer">
+            <label for="prioritet">Prioritet:</label>
+            <select name="prioritet">
+                <option value="1" id="1">Låg</option>
+                <option value="2" id="2">Normal</option>
+                <option value="3" id="3">Hög</option>
+            </select>
+        </div>
+
+        <div class="ort-kontainer">
+            <p id="ortText">Tilldela ort:</p>
+            <!-- Även här använder jag div-element för att elementen ska lägga sig korrekt. -->
+            <div class="input-kontainer">
+                <input type="radio" id="gbg" name="ort" value="gbg">
+                <label for="gbg">Göteborg</label>
+            </div>
+            <div class="input-kontainer">
+                <input type="radio" id="sthlm" name="ort" value="sthlm">
+                <label for="sthlm">Stockholm</label>
+            </div> 
+            <div>
+                <input type="radio" id="ume" name="ort" value="ume">
+                <label for="ume">Umeå</label>
+            </div>
+            <div>
+                <input type="radio" id="lule" name="ort" value="lule">
+                <label for="lule">Luleå</label>
+            </div>
+        </div>
+
+            <label for="kategori" id="kategoriLabel">Kategori</label>
+            <select name="kategori" id="select">
+                <option value="fakt">Fakturering</option>
+                <option value="net">Internet</option>
+                <option value="tel" >Telefoni</option>
+                <option value="epost">E-post</option>
+            </select>
+
+            <label for="rubrik" id="rubrikLabel">Rubrik</label>
+            <input type="text" id="rubrik" name="rubrik">
+
+            <label for="beskrivning" id="beskrivningLabel">Beskrivning</label>
+            <textarea id="beskrivning" name="beskrivning" rows="5" cols="20"></textarea>
+
+            <div class="submit-kontainer">
+                <input type="submit" name="skicka" value="Submit">
+                <input type="reset" name="reset" value="Rensa">
+            </div>
+        </form>
+    </section>
+    
+</body>
+</html>
