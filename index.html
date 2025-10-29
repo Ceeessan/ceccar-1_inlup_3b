@@ -36,19 +36,19 @@
             <p id="ortText">Tilldela ort:</p>
             <!-- Även här använder jag div-element för att elementen ska lägga sig korrekt. -->
             <div class="input-kontainer">
-                <input type="radio" id="gbg" name="ort" value="gbg">
+                <input type="radio" id="gbg" name="ort" value="gbg" required>
                 <label for="gbg">Göteborg</label>
             </div>
             <div class="input-kontainer">
-                <input type="radio" id="sthlm" name="ort" value="sthlm">
+                <input type="radio" id="sthlm" name="ort" value="sthlm" required>
                 <label for="sthlm">Stockholm</label>
             </div> 
             <div>
-                <input type="radio" id="ume" name="ort" value="ume">
+                <input type="radio" id="ume" name="ort" value="ume" required>
                 <label for="ume">Umeå</label>
             </div>
             <div>
-                <input type="radio" id="lule" name="ort" value="lule">
+                <input type="radio" id="lule" name="ort" value="lule" required>
                 <label for="lule">Luleå</label>
             </div>
         </div>
@@ -65,7 +65,7 @@
             <input type="text" id="rubrik" name="rubrik">
 
             <label for="beskrivning" id="beskrivningLabel">Beskrivning</label>
-            <textarea id="beskrivning" name="beskrivning" rows="5" cols="20"></textarea>
+            <textarea id="beskrivning" name="beskrivning" rows="5" cols="20" required></textarea>
 
             <div class="submit-kontainer">
                 <input type="submit" name="skicka" value="Submit">
